@@ -1,0 +1,194 @@
+.header_button, .section_banner_button {
+  transition: 0.5s;
+  width: 125px;
+  height: 42px;
+  background-color: #E3AC00;
+  border: none;
+  border-radius: 3px;
+  font-weight: 600;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  color: #FFF; }
+  .header_button:hover, .section_banner_button:hover {
+    background-color: #ffc717;
+    cursor: pointer;
+    border: 2px solid #ffc40d; }
+  .header_button:active, .section_banner_button:active {
+    background-color: #b08500;
+    cursor: pointer;
+    border: 2px solid #ffc921; }
+
+main > p, .section_card_heading, .section_banner_heading {
+  color: #FFF;
+  font-weight: 600;
+  font-family: "Source Sans Pro", sans-serif; }
+
+body {
+  background-color: #21232E;
+  margin: 0;
+  font-family: "Fresca", sans-serif;
+  color: #D1D1D1; }
+
+.header {
+  color: #FFF;
+  min-height: 630px;
+  background-image: url(../img/m-h-night.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 0 0 530px / 260px 0;
+  font-weight: 900; }
+  .header_heading {
+    font-size: 63px;
+    font-family: "Source Sans Pro", sans-serif;
+    width: 500px;
+    margin-top: 62px;
+    line-height: 1.0; }
+    .header_heading::after {
+      content: '';
+      display: block;
+      background-color: #FF4E33;
+      width: 266px;
+      height: 22px;
+      margin-top: -21px; }
+  .header_text {
+    white-space: pre-line;
+    margin-top: -31px;
+    font-size: 14px;
+    font-weight: 500;
+    word-spacing: 1px;
+    line-height: 1.5; }
+  .header_button {
+    margin-top: 38px; }
+
+.landing-logo {
+  padding: 18px 0 0 0;
+  width: 200px; }
+  .landing-logo::after {
+    content: "";
+    clear: both;
+    display: table; }
+  .landing-logo p {
+    margin: -3px 0 0 0;
+    font-size: 21px;
+    text-align: center;
+    float: left;
+    margin: 0; }
+
+img[alt=logo] {
+  float: left;
+  width: 40px;
+  padding-right: 13px; }
+  img[alt=logo] + p span {
+    display: block;
+    font-size: 9px;
+    margin-top: -5px;
+    margin-top: 1px; }
+
+main p {
+  text-align: center; }
+main > p {
+  font-size: 37px;
+  margin: 32px auto 40px;
+  width: 400px; }
+  main > p::after {
+    content: '';
+    display: block;
+    background-color: #FF4E33;
+    width: 166px;
+    height: 12px;
+    margin: -19px 0 0 206px; }
+
+*[class$="wrap"]:not(.section_banner_text_wrap) {
+  width: 80%;
+  margin: auto; }
+
+.section_card {
+  background-color: #3B3F50;
+  width: 32.3%;
+  border: 0 solid transparent;
+  border-radius: 5px;
+  padding: 18px 18px 3px 18px;
+  box-sizing: border-box;
+  height: auto; }
+  .section_card_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; }
+  .section_card img {
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 5px; }
+  .section_card_underline {
+    display: block; }
+    .section_card_underline::after {
+      content: '';
+      display: block;
+      background-color: #FF4E33;
+      height: 11px;
+      margin-top: -10px; }
+  .section_card_heading {
+    color: #FFF;
+    font-size: 21px;
+    margin: 0 auto;
+    width: fit-content; }
+    .section_card:nth-child(3) .section_card_heading + p {
+      margin-top: 23px; }
+  .section_card_text {
+    font-size: 14px;
+    line-height: 1.5;
+    word-spacing: 1px;
+    text-indent: -5px; }
+
+.section_banner {
+  border-radius: 5px;
+  background: linear-gradient(45deg, #E3AC00, #8f2b52);
+  width: 62%;
+  height: 126px;
+  margin: 122px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  z-index: 1; }
+  .section_banner_heading {
+    margin-top: 10px;
+    font-size: 27px;
+    word-spacing: -2px;
+    font-weight: 700; }
+    .section_banner_heading::after {
+      content: '';
+      display: block;
+      background-color: #FF4E33;
+      width: 56px;
+      height: 11px;
+      margin: -14px 0 0 106px; }
+  .section_banner_text {
+    font-size: 14px;
+    text-align: left;
+    position: relative;
+    top: -11px; }
+
+.footer {
+  background-color: #3B3F50;
+  position: relative;
+  margin-top: -64px;
+  height: 211px; }
+  .footer-wrap {
+    padding-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .footer_logo {
+    margin-top: -6px;
+    font-weight: bold; }
+  .footer_text {
+    font-size: 12px;
+    width: 24%;
+    margin: 11px 22px 0 -77px;
+    line-height: 1.5;
+    word-spacing: 1px;
+    margin-right: 40px; }
+  .footer-cr {
+    font-size: 14px;
+    margin-top: 12px;
+    margin-right: 3px; }
