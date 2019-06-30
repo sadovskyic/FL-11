@@ -1,0 +1,322 @@
+html {
+    font-size: 1vw;
+}
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+.header {
+    height: 45vw;
+    background-image: url(../img/sample2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;   
+    color: #FFFFFF;
+    background-position: center;
+
+}
+.header-wrap {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+}
+.header-top {
+    line-height: 8rem;
+}
+.header-logo {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    float: left;
+    word-spacing: 2px;
+}
+ul {
+    list-style: none;
+    margin: 0;
+}
+li {
+    display: inline-block;
+    margin-left: 120px;
+}
+a, button, input {
+    text-decoration: none;
+    color: #FFFFFF;
+    transition: 0.6s;
+}
+button, 
+button:active, 
+button:focus {
+    outline: none;
+}
+a:hover {
+    color: #9E9E9E;
+}
+.login {
+    float: right;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.brand-wrap {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    height: 26vw;
+}
+.brand-wrap div {
+    margin: 0 auto;
+}
+h1 {
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    font-weight: 500;
+    word-spacing: 3px;
+    margin: 0;
+}
+h1 span {
+    font-size: 1.7em;
+}
+.brand-wrap > div > span {
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+ul.nav {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+.nav li {
+    margin: 0;
+    border: 2px solid #F3F3F3;
+    min-width: 15rem;
+    text-align: center;
+}
+.nav a {
+    font-size: 1.2rem;
+    display: block;
+    padding: 10px;
+}
+.nav a:hover {
+    background-color: #F3F3F3;
+    color: #000000;
+    
+}
+.info-wrap {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: minmax(7rem, auto);
+}
+div.info {
+    background: linear-gradient(to bottom left, #000000 50%, #F3F3F3 50%);
+}
+.bottom-left { 
+    grid-column-start: 1; 
+    grid-column-end: 3; 
+    grid-row-start: 2; 
+    grid-row-end: 3; 
+    font-size: 1.3rem;  
+}
+.top-right {
+    grid-column-start: 4; 
+    grid-column-end: 7; 
+    grid-row-start: 1; 
+    grid-row-end: 2; 
+    color: #FFFFFF;
+}
+h2 {
+    font-weight: 100;
+    text-align: center;
+    margin-top: 0;
+}
+div[class$="-wrap"]:not(.brand-wrap) {
+    margin: 0 auto;
+    width: 90%;
+}
+.articles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(29rem, auto);
+    padding-bottom: 40px;
+}
+.news {
+    background-color: #FFFFFF;
+}
+img {
+    width: 100%;
+}
+main {
+    background-color: #F3F3F3;
+}
+div[class^="sample"] {
+    position: relative;
+}
+div[class^="sample"] img {
+    position: absolute;
+    z-index: 0;
+    border: 1px solid #E8E8E8;
+}
+.date, .likes {
+    z-index: 1;
+    position: relative;
+    color: #FFFFFF;
+}
+.date {
+    left: 4%;
+    top: 82%;
+}
+.likes {
+    width: fit-content;
+    top: 2%;
+    left: 84%;
+}
+.likes button, div[class^="image-news"] > button:nth-child(1){
+    padding: 5px 10px;
+    border: 2px solid #FFFFFF;
+    width: fit-content;
+    font-size: 1.2rem;
+    color: #FFFFFF;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.likes button:hover, div[class^="image-news"] > button:nth-child(1):hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    border-color: rgba(255, 255, 255, 0.6);
+}
+.articles > div:nth-child(2), .articles > div:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 5rem;
+}
+.articles p {
+    text-align: center;
+    line-height: 1.9;
+}
+.articles > div:nth-child(3) {
+    padding: 0 5rem 0 0;
+}
+.sample-2 .date {
+    top: 89%;
+}
+.news {
+    background-color: #FFFFFF;
+    color: #F0F0F0;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+.news-images {
+    display: flex;
+    justify-content: space-around;
+}
+div[class^="image-news"] {
+    width: 20%;
+    height: 25vw;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem;
+    box-sizing: border-box;
+}
+.image-news-1 {
+    background: url(../img/news-list-1.jpg) no-repeat;
+}
+.image-news-2 {
+    background: url(../img/news-list-2.jpg) no-repeat;
+}
+.image-news-3 {
+    background: url(../img/news-list-3.jpg) no-repeat;
+}
+.image-news-4 {
+    background: url(../img/news-list-4.jpg) no-repeat;
+}
+div[class^="image-news"] > button:nth-child(1) {
+    align-self: flex-end;
+}
+div[class^="image-news"] > button:nth-child(2) {
+    background-color: #097774;
+    border: none;
+    height: 2.4rem;
+    opacity: 0.75;
+    color: #FFFFFF;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+div[class^="image-news"] > button:nth-child(2):hover {
+    opacity: 0.95;
+    cursor: pointer;
+}
+.load-news {
+    background-color: #097774;
+    border: none;
+    font-size: 1.2em;
+    align-self: center;
+    margin: 2rem;
+    width: 20rem;
+    height: 3.4rem;
+}
+.load-news:hover,
+input[type=submit]:hover {
+    opacity: 0.75;
+}
+.load-news:active,
+input[type=submit]:active {
+    color: #097774;
+    background-color: #9E9E9E;
+}
+.subscribe {
+    padding: 3rem 2rem;
+    background-color: #F3F3F3;
+}
+label {
+    font-size: 2.2rem;
+}
+form {
+    display: flex;
+    justify-content: flex-end;
+}
+input {
+    margin-left: 2rem;
+}
+input[type=submit] {
+    background-color: #097774;
+    border: none;
+    height: 3.2rem;
+    font-size: 1.1em;
+    width: 8rem;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+#email {
+    border: 1px solid #000000;
+    color: #000000;
+    padding: 1rem;
+    font-size: 1rem;
+}
+.subscribe p {
+    padding-right: 8rem;
+}
+.footer-logo {
+    float: left;
+    color: #9E9E9E;
+    margin-top: 1rem;
+}
+nav {
+    float: right;
+    word-spacing: -1rem;
+}
+.bot li a{
+    color: #000000;
+    display: block;
+    width: 5rem;
+    padding: 1rem;
+    text-align: center;
+}
+.bot li {
+    margin: 0; 
+}
+.bot a:hover {
+    background-color: #000000;
+    color: #F0F0F0;
+}
