@@ -110,12 +110,12 @@ function daysBetween(date1, date2) {
 }
 console.log(daysBetween(new Date('2016-03-18T00:00:00'), new Date('2016-04-19T00:00:00')));
 function getAmountOfAdultPeople(arr) {
-    const adultAge = 18,
-          daysInYear = 365;
+    const adultAge = 18;
     let adults = filterArray(arr, el => {
         for (let key in el) {
             if (~key.indexOf('birthday')) {
-                return daysBetween(new Date(el[key]), Date.now()) > daysInYear * adultAge;
+                let bDay = new Date(el[key]);
+                return daysBetween(bDay.setFullYear(bDay.getFullYear() + adultAge), Date.now()) > 0;
             }
         }        
     });
