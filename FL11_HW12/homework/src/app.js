@@ -216,9 +216,6 @@ function EditTask(button) {
     };
 }
 let editButtons = new EditTask(document);
-function notRepeated(value1, value2) {
-    return value1 !== value2;
-}
 window.alert = function (message) {
     let err = document.createElement('div'),
         root = document.getElementById('root'),
