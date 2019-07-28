@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.page {
+    text-align: center;
+    width: 100vw;
+    height: 100vh;  
+}
+input {
+    width: 250px;
+}
+.done {
+    background-image: url(./img/done-s.png);
+    background-size: 100%;
+    min-height: 30px;  
+    min-width: 30px;
+}
+.todo {
+    background-image: url(./img/todo-s.png);
+    background-size: 100%;
+    min-height: 30px;  
+    min-width: 30px;
+}
+.remove {
+    background-image: url(./img/remove-s.jpg);
+    background-size: 100%;
+    min-height: 30px;  
+    min-width: 30px;
+}
+#tasks {
+    width: 40%;
+    margin: 20px auto 0;
+}
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+p {
+    font-size: 1.5em;
+    overflow: hidden;
+}
+.empty p {
+    margin: 0 auto;
+}
+button {
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 7px;
+}
+.task-done {
+    background-color: gray;
+}
+button,
+.remove,
+.todo,
+.done {
+    cursor: pointer;
+    transition: 0.4s;
+}
+.remove:hover,
+.todo:hover,
+.done:hover,
+button:hover {
+    opacity: 0.8;
+}
+.wrapper {
+    display: flex;
+    width: 250px;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+#root {
+    position: relative;
+}
+.alert {
+    position: absolute;
+    background-color: OrangeRed;
+    color: white;
+    width: 220px;
+    height: 80px;
+    top: 10px;
+    padding: 10px;
+}
