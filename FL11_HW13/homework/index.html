@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    <link rel="stylesheet/less" type="text/css" href="./styles/styles.less" />
+    <script src="./js/less.min.js"></script>
+    <title>CSS frameworks</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-light bg-light p-md-0 px-2">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="./img/logo.png" width="30" height="30" alt="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+                aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navigation">
+                <ul class="nav navbar-nav nav-pills mr-auto nav-justified" id="pills-tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="pills-classes-tab" data-toggle="pill" href="#pills-classes"
+                            role="tab" aria-controls="pills-classes" aria-selected="true">Classes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pills-about-tab" data-toggle="pill" href="#pills-about" role="tab"
+                            aria-controls="pills-about" aria-selected="false">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
+                            aria-controls="pills-contact" aria-selected="false">Contacts</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container px-2">
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-classes" role="tabpanel"
+                    aria-labelledby="pills-classes-tab">
+                    <h1 class="pb-2 pt-4">Yoga Pilates</h1>
+                    <div class="row py-3">
+                        <div class="col-lg-8">
+                            <img src="./img/yoga.jpg" class="img-fluid mb-3" alt="yoga">
+                        </div>
+                        <div class="col-lg-4 pb-4">
+                            <h2 class="description-header">Class description</h2>
+                            <p>This workout uses a series of exercise routines designed to increase your core strength &
+                                improve your posture,
+                                energy, & flexibility. Pilates work is powered by breath, flow, & centering. By focusing
+                                on
+                                the mind-body connection
+                                & using more efficient form, this workout helps develop a stronger, leaner, healthier
+                                body.
+                                Appropriate for all
+                                fitness levels.</p>
+                            <ul>
+                                <li>One Personal Trainer</li>
+                                <li>Big gym space for training</li>
+                                <li>Free tools &amp; props</li>
+                                <li>Free locker</li>
+                                <li>Free before / after shower</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h2 class="pb-2">Related classes</h2>
+                    <div class="row py-2">
+                        <div class="mobile-padding col-6 col-md-3">
+                            <div class="card text-white text-center bg-red mb-3">
+                                <img src="./img/cardio-kickbox.jpg" class="card-img-top" alt="cardio-kickbox">
+                                <div class="card-body p-2">
+                                    <p class="card-text">Cardio kickboxing</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mobile-padding col-6 col-md-3">
+                            <div class="card text-white text-center bg-blue mb-3">
+                                <img src="./img/fitness.jpg" class="card-img-top" alt="Fitness xpress">
+                                <div class="card-body p-2">
+                                    <p class="card-text">Fitness xpress</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mobile-padding col-6 col-md-3">
+                            <div class="card text-white text-center bg-orange mb-3">
+                                <img src="./img/zumba.jpg" class="card-img-top" alt="Zumba">
+                                <div class="card-body p-2">
+                                    <p class="card-text">Zumba</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mobile-padding col-6 col-md-3">
+                            <div class="card text-white text-center bg-green mb-3">
+                                <img src="./img/bootcamp.jpg" class="card-img-top" alt="Bootcamp">
+                                <div class="card-body p-2">
+                                    <p class="card-text">Bootcamp</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-about" role="tabpanel" aria-labelledby="pills-about-tab">
+                    <h2 class="pb-2 pt-4">About us</h2>    
+                </div>
+                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                    <h2 class="pb-2 pt-4">Contacts</h2>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container px-2">
+            <div class="bg-footer py-2 px-3">
+                <span class="text-white">&copy;Epam Front-end lab, 2019</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</body>
+
+</html>

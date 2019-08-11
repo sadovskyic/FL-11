@@ -1,0 +1,36 @@
+@import "variables";
+@import "navbar";
+@import "relatedClass";
+#mobile-fix-space() {
+    overflow-x: hidden;
+}
+html {
+    font-size: @rem;
+    #mobile-fix-space();
+}
+body {
+    #mobile-fix-space();
+}
+h1, h2 {
+    color: @colors[blue];
+    border-bottom: 2px solid $color;
+}
+.description-header {
+    border-bottom: none;
+}
+@media (max-width: @small-device-max-width) {
+    .container {
+        max-width: @small-device-max-width;
+    }
+    .mobile-padding {
+        &:nth-child(odd) {
+            padding-right: 7px; 
+        }
+        &:nth-child(even) {
+            padding-left: 7px; 
+        }
+    }
+}
+.tab-pane {
+    min-height: 85vh + 1px;
+}
