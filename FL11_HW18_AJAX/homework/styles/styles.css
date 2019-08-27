@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.page {
+    text-align: center;
+    width: 100vw;
+    height: 100vh;  
+}
+input {
+    width: 250px;
+}
+#users {
+    width: 40%;
+    margin: 20px auto 0;
+}
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+li:nth-child(odd) {
+    background-color: #F5F5F5;
+}
+p {
+    font-size: 1.5em;
+    overflow: hidden;
+}
+button {
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 7px;
+    outline: none;
+}
+button {
+    cursor: pointer;
+    transition: 0.4s;
+}
+button:hover {
+    opacity: 0.8;
+}
+.wrapper {
+    display: flex;
+    width: 250px;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+#root {
+    position: relative;
+}
+fieldset {
+    padding: 15px;
+    display: flex;
+}
+.buttons-group {
+    display: flex;
+    flex-direction: column;
+}
+.lds-ring {
+    position: relative;
+}
+.lds-ring div {
+    box-sizing: border-box;
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 40vh;
+    width: 70px;
+    height: 70px;
+    margin: 6px;
+    border: 8px solid #cef;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #cef transparent transparent transparent;
+    z-index: 100;
+}
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+  }
+}
