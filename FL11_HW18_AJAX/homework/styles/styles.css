@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 .page {
     text-align: center;
@@ -90,4 +91,49 @@ fieldset {
     100% {
       transform: rotate(360deg);
   }
+}
+li p:hover {
+    cursor: pointer;
+    background-color: gray;
+    color: #fff;
+}
+p {
+    padding: 6px;
+    transition: 0.5s;
+}
+#posts p {
+    font-size: 1rem;
+}
+#posts h3+p {
+    font-size: 1.2rem;
+}
+#posts > div > div {
+    border: 2px solid gray;
+}
+.comment-wrap {
+    display: flex;
+}
+.comment-wrap > div:nth-child(1) {
+    overflow: auto;
+    width: 20vw;
+}
+.comment-wrap > div:nth-child(2) {
+    overflow: auto;
+    width: 20vw;
+}
+.comment-wrap > div:nth-child(3) {
+    overflow: auto;
+    width: 55vw;
+}
+#posts div {
+    padding: 5px;
+}
+.comment-wrap div {
+    outline: auto;
+}
+#posts {
+    width: 100%
+}
+.posts-wrap > div:nth-child(odd) {
+    background-color: #F5F5F5;
 }
