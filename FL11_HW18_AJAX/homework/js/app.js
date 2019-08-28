@@ -15,29 +15,37 @@ function usersFromAPI(url) {
   request.send();
   request.onload = async () => {
     users = await JSON.parse(request.response);
-    makeUsersList(users);
-    setTimeout(hideSpinner, 1000);
+    await makeUsersList(users);
+    setTimeout(hideSpinner, 3000);
   };
   request.onprogress = () => showSpinner();
 }
 
 function makeUsersList(users) {
   usersList.innerHTML = '';
-  users.forEach(user => {
+  users.forEach(async user => {
+    let extension = 'gif';
+    while (extension === 'gif') {
+      await getAvatar().then(url => (user.avatar = url));
+      extension = user.avatar.split('.').pop();
+    }
     let li = document.createElement('li'),
       userName = document.createElement('p'),
-      editButton = document.createElement('button');
+      editButton = document.createElement('button'),
+      img = document.createElement('img');
+    img.classList = 'avatar-min';
+    img.src = user.avatar;
     editButton.innerText = 'Edit';
     editButton.setAttribute('data-action', 'edit');
     li.setAttribute('id', user.id);
     userName.innerText = user.username;
     userName.setAttribute('data-action', 'getPosts');
+    li.appendChild(img);
     li.appendChild(userName);
     li.appendChild(editButton);
     usersList.appendChild(li);
   });
 }
-
 function showPage(pageId, elemId) {
   location.hash = `/${pageId}`;
   let page = document.getElementById(pageId);
@@ -63,7 +71,7 @@ function EditProfile(button) {
       self[action]();
     }
   };
-  this.edit = () => {
+  this.edit = async () => {
     let id = Number(event.target.parentElement.getAttribute('id')),
       editPage = document.querySelector('#edit .wrapper'),
       user = users.find(user => user.id === id),
@@ -72,10 +80,16 @@ function EditProfile(button) {
       cancel = document.createElement('button'),
       change = document.createElement('button'),
       remove = document.createElement('button'),
+      img = document.createElement('img'),
       buttons = document.createElement('div');
     editPage.innerHTML = '';
+    img.src = await user.avatar;
     for (let prop in user) {
-      if (prop !== 'id' && typeof user[prop] !== 'object') {
+      if (
+        prop !== 'id' &&
+        typeof user[prop] !== 'object' &&
+        prop !== 'avatar'
+      ) {
         userData.person[prop] = user[prop];
       }
       if (typeof user[prop] === 'object') {
@@ -103,6 +117,9 @@ function EditProfile(button) {
       form.appendChild(fieldSet);
       form.setAttribute('name', 'person');
     }
+    img.classList = 'avatar';
+    img.setAttribute('alt', 'avatar');
+    editPage.append(img);
     editPage.appendChild(form);
     cancel.innerText = 'Cancel';
     change.innerText = 'Save Changes';
@@ -132,9 +149,8 @@ function EditProfile(button) {
     };
     request.onload = () => {
       console.log(request.response);
-      setTimeout(hideSpinner, 1000);
-      setTimeout(() => showPage(PAGE.main), 1000);
-      usersFromAPI(usersUrl);
+      setTimeout(hideSpinner, 1500);
+      setTimeout(() => showPage(PAGE.main), 1500);
     };
   };
   this.remove = () => {
@@ -148,9 +164,8 @@ function EditProfile(button) {
     };
     request.onload = () => {
       console.log(request.response);
-      setTimeout(hideSpinner, 1000);
-      setTimeout(() => showPage(PAGE.main), 1000);
-      usersFromAPI(usersUrl);
+      setTimeout(hideSpinner, 1500);
+      setTimeout(() => showPage(PAGE.main), 1500);
     };
   };
   this.getPosts = async () => {
@@ -210,7 +225,7 @@ function EditProfile(button) {
       backButtonTop.setAttribute('data-action', 'cancel');
       postsPage.appendChild(backButtonTop);
       showPage(PAGE.posts, userId);
-      setTimeout(hideSpinner, 1000);
+      setTimeout(hideSpinner, 1500);
     };
     request.onprogress = () => showSpinner();
   };
@@ -229,4 +244,18 @@ function hideSpinner() {
     div.style.display = 'none';
   });
   root.style.opacity = '1';
+}
+async function getAvatar() {
+  let url;
+  await fetch('https://api.thecatapi.com/v1/images/search', { mode: 'cors' })
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(json) {
+      url = json[0].url;
+    })
+    .catch(function(error) {
+      console.log('Request failed', error);
+    });
+  return url;
 }

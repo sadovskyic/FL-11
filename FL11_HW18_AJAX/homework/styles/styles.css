@@ -42,8 +42,8 @@ button:hover {
 }
 .wrapper {
     display: flex;
-    width: 250px;
-    justify-content: space-evenly;
+    min-width: 350px;
+    justify-content: center;
     margin: 0 auto;
 }
 #root {
@@ -98,7 +98,8 @@ li p:hover {
     color: #fff;
 }
 p {
-    padding: 6px;
+    min-width: 220px;;
+    padding: 12px;
     transition: 0.5s;
 }
 #posts p {
@@ -136,4 +137,16 @@ p {
 }
 .posts-wrap > div:nth-child(odd) {
     background-color: #F5F5F5;
+}
+.avatar-min {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 5px;
+}
+.avatar {
+    width: 284px;
+    height: 234px;
+    margin-top: 9px;
+    border: 1px solid gray;
 }
